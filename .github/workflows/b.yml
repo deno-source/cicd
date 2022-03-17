@@ -21,3 +21,6 @@ jobs:
           who-to-greet: John
       - name: log 
         run: echo "${{  steps.greet.outputs.time }}" # 这里访问等待引用的内容 可以通过这种方式引用变量
+      - name: run nodejs
+        run: |
+          node ./src/index.js
