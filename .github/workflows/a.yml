@@ -1,7 +1,7 @@
 name: shell commands # 任务名字
 on: [push] # 触发的事件
 jobs: # 工作，可以有多个
-  shell: # 工作名称1
+  run-shell-command: # 工作名称1
     runs-on: ubuntu-latest # 在指定的容器里面运行
     steps: # 需要执行的步骤
       - name: echo a string # 步骤名称1
