@@ -2,7 +2,7 @@ name: ip
 on: push
 jobs:
   run-with-ip:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: ipconfig
-        run: ipconfig
+      - name: ip
+        run: curl https://www.ip138.com/
