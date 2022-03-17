@@ -1,9 +1,11 @@
-name: b
+name: nodejs
 on: push
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: 拉取仓库代码
+        run: actions/checkout@v1
       - name: 运行nodejs
         run: |
           node ./src/index.js
