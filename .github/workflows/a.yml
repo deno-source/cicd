@@ -1,23 +1,24 @@
-name: shell commands
-on: [push, status]
-jobs:
-  shell:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo a string
-        run: echo "我的程序开始跑起来"
-      - name: multiline script
-        run: |
+name: shell commands # 任务名字
+on: [push] # 触发的事件
+jobs: # 工作，可以有多个
+  shell: # 工作名称1
+    runs-on: ubuntu-latest # 在指定的容器里面运行
+    steps: # 需要执行的步骤
+      - name: echo a string # 步骤名称1
+        run: echo "我的程序开始跑起来" # 执行的内容1
+      - name: multiline script # 步骤名称2
+        run: | # 执行的内容2
           node -v
           npm -v
-      - name: python commands
-        run: |
+      - name: python commands # 步骤名称3
+        run: | # 执行的内容3
           import platform
           print(platform.processor())
-        shell: python
-  run-windows-commands:
+        shell: python # 在什么环境下执行
+  run-windows-commands: # 工作名称2
     runs-on: windows-latest
-    needs: ["run-shell-command"]
+    needs: ["run-shell-command"] # 需要先运行完哪些工作，才能触发这个
     steps:
-      - name: show somebody 
-        run: Get-Location
+      - name: show somebody
+        run: |
+          Get-Location
