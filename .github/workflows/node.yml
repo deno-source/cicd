@@ -1,0 +1,9 @@
+name: b
+on: push
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 运行nodejs
+        run: |
+          node ./src/index.js
