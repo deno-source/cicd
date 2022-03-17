@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ip
-        run: curl https://ifconfig.me
+        run: curl https://ifconfig.me/
