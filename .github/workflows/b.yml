@@ -4,11 +4,14 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: show floder
+        run: |
+          pwd
+          ls -a
       - name: simple js action
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with:
+        id: greet # 设置 id 方便别人引用
+        uses: actions/hello-world-javascript-action@v1 # 公共别人写的包
+        with: # 这个包的参数
           who-to-greet: John
       - name: log 
-        run: echo "${{  steps.greet.outputs.time }}"
-         
+        run: echo "${{  steps.greet.outputs.time }}" # 这里访问等待引用的内容 可以通过这种方式引用变量
