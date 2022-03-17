@@ -8,6 +8,12 @@ jobs:
         run: |
           pwd
           ls -a
+      - name: checkout floder
+        uses: actions/checkout@v1
+      - name: show floder
+        run: |
+          pwd
+          ls -a
       - name: simple js action
         id: greet # 设置 id 方便别人引用
         uses: actions/hello-world-javascript-action@v1 # 公共别人写的包
