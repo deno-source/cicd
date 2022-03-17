@@ -1,0 +1,12 @@
+name: shell commands
+on: [push, status]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "我的程序开始跑起来"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
