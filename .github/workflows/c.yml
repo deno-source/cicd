@@ -1,7 +1,7 @@
 name: enviroment
 on: push
 env:
-  SUPER_SECRET: ${{ secrets.USER }}
+  SUPER_SECRET: 10096
 jobs:
   enviroment:
     runs-on: ubuntu-latest
