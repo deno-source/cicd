@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: step1
         run: |
-          echo "${ SUPER_SECRET }"
+          echo "${SUPER_SECRET}"
