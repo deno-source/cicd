@@ -1,7 +1,5 @@
 name: ip
 on: 
-  push:
-    branches: [ main ]
   schedule:
     - cron: 0/5 * * * *
 jobs:
