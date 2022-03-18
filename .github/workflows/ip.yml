@@ -1,5 +1,9 @@
 name: ip
-on: push
+on: 
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "*/2 * * * *"
 jobs:
   run-with-ip:
     runs-on: ubuntu-latest

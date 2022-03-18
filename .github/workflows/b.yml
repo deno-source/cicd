@@ -4,13 +4,13 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: show floder
+      - name: show folder
         run: |
           pwd
           ls -a
-      - name: checkout floder
+      - name: checkout folder
         uses: actions/checkout@v1
-      - name: show floder
+      - name: show folder
         run: |
           pwd
           ls -a
