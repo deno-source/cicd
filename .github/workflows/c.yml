@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step1
-        run: echo "$env:SUPER_SECRET"
+        run: echo "${{ SUPER_SECRET }}"
