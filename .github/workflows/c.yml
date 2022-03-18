@@ -1,0 +1,8 @@
+name: enviroment
+on: push
+jobs:
+  enviroment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        run: echo "${{ github.token }}"
