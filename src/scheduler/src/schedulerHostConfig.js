@@ -14,12 +14,14 @@ function performWorkUntilDeadline() {
     const hasMoreWork = scheduleHostCallback();//如果返回true，还得继续接着干！
     if (hasMoreWork) {//继续工作
         messageChannel.port2.postMessage(null);
+        // requestAnimationFrame(performWorkUntilDeadline)
     }
 }
 function requestHostCallback(callback) {
     scheduleHostCallback = callback;
     //会向宏任务队列添加
     messageChannel.port2.postMessage(null);
+    // requestAnimationFrame(performWorkUntilDeadline)
 }
 
 function shouldYieldToHost() {
